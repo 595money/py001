@@ -8,3 +8,7 @@ elif country == '美國':
         print('你可以開車')
 else:
     print('你不可以開車')
+x = 0
+while x < 10:
+    x += 1
+    print('x = ', x)

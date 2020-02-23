@@ -9,6 +9,7 @@ while True:
         # 2.1 正確則離開迴圈
         print('正確')
         break
+
     # 2.2. 錯誤時減少可嘗試次數
     max_error_count -= 1
 

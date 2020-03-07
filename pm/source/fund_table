@@ -1,0 +1,32 @@
+SELECT *
+  FROM TROLL.FUNDS
+'''
+INSERT INTO [TROLL].[FUNDS]
+           ([DEPOSIT_DATE]
+           ,[EXCHANGE_RATE]
+           ,[TOTAL_PAY_NTD]
+           ,[TOTAL_PAY_USD])
+     VALUES
+           (?
+           ,?
+           ,?
+           ,?)
+'''
+'''
+INSERT INTO [TROLL].[PORTFOLIO]
+           ([TICKER_SYMBOL]
+           ,[OPEN_DATE]
+           ,[CLOSE_DATE]
+           ,[TOTAL_PAY_USD]
+           ,[OPEN]
+           ,[CLOSE]
+           ,[UNITS])
+     VALUES
+           (?
+           ,?
+           ,?
+           ,?
+           ,?
+           ,?
+           ,?)
+'''

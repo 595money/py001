@@ -70,3 +70,55 @@ class EtoroMain(FileExecuter):
         # 1_2. read etoro Fund csv file
         self.file_editor.is_exist('TODO') # TODO
         self.file_editor.read('TODO')  # TODO 讀取etoro匯出的資料
+        self.file_editor.write('TODO')  # TODO 進行搬檔(1)，將讀取完的資料寫到complete資料夾
+        self.file_editor.delete('TODO')  # TODO  進行搬檔(2)，移除資料來源檔
+        # 1_3. convert csv file to FundBean set
+
+        # 1_4. Set operation
+
+        # 1_5. insert Fund table done
+        # self.fund.insert(conn)
+        pass
+
+    def insert_portfolio(self):
+        # 2. insert Portfolio
+        portfolio = DAOFactory().create_product('portfolio')
+
+        # 2_1. search all data from Portfolio table
+        funds_set = portfolio.select(self.conn) # TODO
+
+        # 2_2. read etoro Portfolio csv file
+        self.file_editor.is_exist('TODO') # TODO
+        self.file_editor.read('TODO')  # TODO 讀取etoro匯出的資料
+        self.file_editor.write('TODO')  # TODO 進行搬檔(1)，將讀取完的資料寫到complete資料夾
+        self.file_editor.delete('TODO')  # TODO  進行搬檔(2)，移除資料來源檔
+        # 2_3. convert csv file to PortfolioBean set
+
+        # 2_4. Set operation
+
+        # 2_5. insert Portfolio table done
+        pass
+    def update_portfolio(self):
+        # 2. insert Portfolio
+        portfolio = DAOFactory().create_product('portfolio')
+
+        # 2_1. search all data from Portfolio table
+        funds_set = portfolio.select(self.conn)
+
+        # 2_2. read etoro Portfolio csv file
+
+        # 2_3. convert csv file to PortfolioBean set
+
+        # 2_4. Set operation
+
+        # 2_5. insert Portfolio table done
+        pass
+    def execute(self):
+        self.welcome()
+        self.interaction(input('請輸入:'))
+        self.process(self.status)
+
+
+print(1, '\n')
+e = EtoroMain()
+e.execute()
